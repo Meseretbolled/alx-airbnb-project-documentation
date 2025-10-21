@@ -1,73 +1,96 @@
+Airbnb Clone Backend Features
+
+A comprehensive overview of the core functionalities, technical requirements, and non-functional requirements of the Airbnb Clone backend.
+
 1. Core Functionalities
+User Management
 
--User Management
+Sign up / login as guest or host (supports JWT and OAuth).
 
--Sign up/login as guest or host (JWT, OAuth).
+Profile management: update personal information, preferences, and photos.
 
--Profile management: update info, preferences, photos.
+Property Listings Management
 
--Property Listings Management
+Hosts can add, edit, or delete property listings.
 
--Hosts can add, edit, or delete property listings.
+Listings include:
 
--Listings include details: title, description, location, price, amenities, availability.
+Title & description
 
--Search & Filtering
+Location
 
--Search by location, price, guests, amenities.
+Price
 
--Pagination for large datasets.
+Amenities
 
--Booking Management
+Availability
 
--Guests can create or cancel bookings.
+Search & Filtering
 
--Track booking status: pending, confirmed, canceled, completed.
+Search by location, price, number of guests, and amenities.
 
--Payment Integration
+Supports pagination for large datasets.
 
--Secure payments (Stripe/PayPal).
+Booking Management
 
--Support multiple currencies.
+Guests can create or cancel bookings.
 
--Automatic host payouts.
+Track booking status: pending, confirmed, canceled, completed.
 
--Reviews & Ratings
+Payment Integration
 
--Guests leave reviews; hosts can respond.
+Secure payments via Stripe or PayPal.
 
--Linked to specific bookings.
+Support for multiple currencies.
 
--Notifications
+Automatic host payouts.
 
--Email and in-app notifications for bookings, cancellations, payments.
+Reviews & Ratings
 
--Admin Dashboard
+Guests can leave reviews; hosts can respond.
 
--Manage users, listings, bookings, payments.
+Reviews are linked to specific bookings.
+
+Notifications
+
+Email and in-app notifications for:
+
+Bookings
+
+Cancellations
+
+Payments
+
+Admin Dashboard
+
+Manage users, property listings, bookings, and payments.
 
 2. Technical Requirements (Summary)
 
--Relational database (PostgreSQL/MySQL) with tables: Users, Properties, Bookings, Payments, Reviews.
+Database: Relational database (PostgreSQL or MySQL)
 
--RESTful API endpoints (GET, POST, PUT/PATCH, DELETE).
+Tables: Users, Properties, Bookings, Payments, Reviews
 
--JWT authentication with role-based access control (guest, host, admin).
+API: RESTful endpoints (GET, POST, PUT/PATCH, DELETE)
 
--File storage for images (AWS S3 / Cloudinary).
+Authentication: JWT with role-based access control (guest, host, admin)
 
--Third-party email service (SendGrid / Mailgun).
+File Storage: Images via AWS S3 or Cloudinary
 
--Global error handling and logging.
+Email Service: SendGrid or Mailgun integration
+
+Error Handling & Logging: Global error handling and logging
 
 3. Non-Functional Requirements
 
--Scalability: Modular architecture, horizontal scaling.
+Scalability: Modular architecture, supports horizontal scaling.
 
--Security: Encrypt sensitive data, rate limiting.
+Security: Encrypt sensitive data, rate limiting, secure authentication.
 
--Performance: Cache frequently accessed data, optimize queries.
+Performance: Cache frequently accessed data, optimize database queries.
 
--Testing: Unit/integration tests and automated API testing.
+Testing: Unit tests, integration tests, and automated API testing.
 
-## A visual representation of these features and relationships is provided in the `airbnb-backend-features.png` file in this directory.
+4. Visual Representation
+
+A visual diagram of features and their relationships is provided in the airbnb-backend-features.png file.
