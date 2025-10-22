@@ -64,13 +64,14 @@ Guests can view and search properties based on location, price, and availability
 
 🔹 API Endpoints
 
-Method  Endpoint	        Description
 
-POST	/api/properties	        Add a new property (Host only)
-GET	    /api/properties	        Get all properties with filters
-GET	    /api/properties/:id	    Get a single property by ID
-PUT	    /api/properties/:id	    Update property details
-DELETE	/api/properties/:id   	Delete property listing
+| Method | Endpoint             | Description                               |
+|--------|----------------------|-------------------------------------------|
+| `POST` | /api/properties	    |Add a new property (Host only)             |
+| `GET ` | /api/properties	    |  Get all properties with filters          |
+| `GET`  | /api/properties/:id	|  Get a single property by ID              |
+| `PUT| ` /api/properties/:id	  | Update property details                   |
+| `POST` | `/api/auth/logout`   | 	Delete property listing                 |
 
 🔹 Input Example
 
@@ -118,12 +119,13 @@ The booking system handles all booking-related operations, including availabilit
 
 🔹 API Endpoints 
 
-Method    Endpoint                  Description
-   
-POST      /api/bookings             Create a new booking
-GET       /api/bookings/:id         Retrieve booking details
-GET       /api/bookings/user/:id    Get all bookings by user
-DELETE    /api/bookings/:id         Cancel a booking
+| Method | Endpoint                | Description                               |
+|--------|----------------------   |-------------------------------------------|
+| `POST` |  /api/bookings          | Create a new booking                      |
+| `GET ` |  /api/bookings/:id  	   | Retrieve booking details                  |
+| `GET`  |  /api/bookings/user/:id | Get all bookings by user                  |
+| `DELETE| `/api/bookings/:id      | Cancel a booking                          |
+
 
 🔹 Input Example
 
