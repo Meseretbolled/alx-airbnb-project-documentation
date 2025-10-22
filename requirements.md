@@ -18,9 +18,9 @@ The authentication system allows users (Guests, Hosts, Admins) to securely regis
 | `PUT`  | `/api/auth/profile`  | Updates user profile information          |
 | `POST` | `/api/auth/logout`   | Logs out a user by invalidating the token |
 
-# 🔹 Input Specifications
-# `/api/auth/register`
-```json
+### Input Specifications
+# ` /api/auth/register`
+
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -39,7 +39,7 @@ Output (Success)
   },
   "token": "jwt_token_here"
 }
-🔹 Validation Rules
+### Validation Rules
 
 Email must be unique and valid.
 
@@ -47,7 +47,7 @@ Password must have at least 8 characters, including uppercase, lowercase, and a 
 
 Role must be one of: guest, host, admin.
 
-🔹 Performance Criteria
+###  Performance Criteria
 
 Registration response time < 2 seconds
 
@@ -55,14 +55,14 @@ JWT token valid for 24 hours
 
 Failed login attempts limited to 5 per hour per IP
 
-📗 2. Property Management
+# 📗2. Property Management
 
 🔹 Functional Overview
 Hosts can create, edit, delete, and manage property listings.
 
 Guests can view and search properties based on location, price, and availability.
 
-🔹 API Endpoints
+### API Endpoints
 
 
 | Method | Endpoint             | Description                               |
@@ -73,9 +73,9 @@ Guests can view and search properties based on location, price, and availability
 | `PUT| ` /api/properties/:id	  | Update property details                   |
 | `POST` | `/api/auth/logout`   | 	Delete property listing                 |
 
-🔹 Input Example
+Input Example
 
-/api/properties (Add Property)
+### /api/properties (Add Property)
 
 {
   "title": "Modern Apartment in Addis Ababa",
@@ -85,7 +85,7 @@ Guests can view and search properties based on location, price, and availability
   "amenities": ["Wi-Fi", "Parking", "Kitchen"],
   "availability": true
 }
-🔹 Output Example
+##  Output Example
 
 {
   "message": "Property added successfully",
@@ -96,7 +96,8 @@ Guests can view and search properties based on location, price, and availability
     "host_id": "u123"
   }
 }
-🔹 Validation Rules
+
+### Validation Rules
 
 Title, description, price, and location are required.
 
@@ -104,16 +105,16 @@ Price must be a positive integer.
 
 Host must be authenticated and authorized.
 
-🔹 Performance Criteria
+### Performance Criteria
 Database query time for property search: < 500ms
 
 Support pagination (default 10 properties per page)
 
 Use caching for frequent search queries.
 
-📙 3. Booking System
+# 📙 3. Booking System
 
-🔹 Functional Overview
+###  Functional Overview
 
 The booking system handles all booking-related operations, including availability checks, booking confirmation, cancellations, and notifications.
 
@@ -127,7 +128,7 @@ The booking system handles all booking-related operations, including availabilit
 | `DELETE| `/api/bookings/:id      | Cancel a booking                          |
 
 
-🔹 Input Example
+ ## Input Example
 
 /api/bookings (Create Booking)
 
@@ -139,7 +140,7 @@ The booking system handles all booking-related operations, including availabilit
   "payment_method": "credit_card"
 }
 
-🔹 Output Example
+## Output Example
 
 {
   "message": "Booking confirmed successfully",
@@ -152,7 +153,7 @@ The booking system handles all booking-related operations, including availabilit
   }
 }
 
-🔹 Validation Rules
+### Validation Rules
 
 Dates must be valid and not overlap with existing bookings.
 
@@ -160,7 +161,7 @@ Property must be available.
 
 Payment must be confirmed before booking confirmation.
 
-🔹 Performance Criteria
+### Performance Criteria
 
 Booking confirmation time < 3 seconds
 
@@ -168,7 +169,7 @@ Prevent duplicate or overlapping bookings.
 
 Implement asynchronous confirmation notifications via email.
 
-General Notes
+### vGeneral Notes
 
 All APIs return appropriate HTTP status codes:
 
@@ -182,7 +183,7 @@ All APIs return appropriate HTTP status codes:
 
 All sensitive data (passwords, tokens) are encrypted using bcrypt and JWT.
 
-Summary
+### Summary
 
 This document ensures the Airbnb Clone backend supports:
 
