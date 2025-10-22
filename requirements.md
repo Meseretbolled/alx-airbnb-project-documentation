@@ -27,8 +27,9 @@ The authentication system allows users (Guests, Hosts, Admins) to securely regis
   "password": "strongPassword123",
   "role": "host"
 }
-
+```
 Output (Success)
+```json 
 {
   "message": "User registered successfully",
   "user": {
