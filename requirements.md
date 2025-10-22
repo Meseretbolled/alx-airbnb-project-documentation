@@ -86,8 +86,9 @@ Input Example
   "amenities": ["Wi-Fi", "Parking", "Kitchen"],
   "availability": true
 }
+```
 ##  Output Example
-
+```json
 {
   "message": "Property added successfully",
   "property": {
@@ -101,18 +102,18 @@ Input Example
 
 ### Validation Rules
 
-Title, description, price, and location are required.
+-- Title, description, price, and location are required.
 
-Price must be a positive integer.
+-- Price must be a positive integer.
 
-Host must be authenticated and authorized.
+-- Host must be authenticated and authorized.
 
 ### Performance Criteria
-Database query time for property search: < 500ms
+-- Database query time for property search: < 500ms
 
-Support pagination (default 10 properties per page)
+-- Support pagination (default 10 properties per page)
 
-Use caching for frequent search queries.
+-- Use caching for frequent search queries.
 
 # 📙 3. Booking System
 
@@ -141,9 +142,10 @@ The booking system handles all booking-related operations, including availabilit
   "check_out": "2025-11-05",
   "payment_method": "credit_card"
 }
-
+```
 ## Output Example
 
+```json
 {
   "message": "Booking confirmed successfully",
   "booking": {
@@ -157,40 +159,40 @@ The booking system handles all booking-related operations, including availabilit
 ```
 ### Validation Rules
 
-Dates must be valid and not overlap with existing bookings.
+-- Dates must be valid and not overlap with existing bookings.
 
-Property must be available.
+-- Property must be available.
 
-Payment must be confirmed before booking confirmation.
+-- Payment must be confirmed before booking confirmation.
 
 ### Performance Criteria
 
-Booking confirmation time < 3 seconds
+-- Booking confirmation time < 3 seconds
 
-Prevent duplicate or overlapping bookings.
+-- Prevent duplicate or overlapping bookings.
 
-Implement asynchronous confirmation notifications via email.
+-- Implement asynchronous confirmation notifications via email.
 
 ### General Notes
 
 All APIs return appropriate HTTP status codes:
 
-200 OK for successful requests
+-- 200 OK for successful requests
 
-400 Bad Request for validation errors
+-- 400 Bad Request for validation errors
 
-401 Unauthorized for invalid JWT
+-- 401 Unauthorized for invalid JWT
 
-404 Not Found for missing resources
+-- 404 Not Found for missing resources
 
-All sensitive data (passwords, tokens) are encrypted using bcrypt and JWT.
+-- All sensitive data (passwords, tokens) are encrypted using bcrypt and JWT.
 
 ### Summary
 
---This document ensures the Airbnb Clone backend supports:
+-- This document ensures the Airbnb Clone backend supports:
 
---Secure user registration and authentication.
+-- Secure user registration and authentication.
 
---Scalable property listing management.
+-- Scalable property listing management.
 
---Reliable and validated booking functionality.
+-- Reliable and validated booking functionality.
