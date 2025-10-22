@@ -20,7 +20,7 @@ The authentication system allows users (Guests, Hosts, Admins) to securely regis
 
 ### Input Specifications
 # ` /api/auth/register`
-
+```json
 {
   "name": "John Doe",
   "email": "john@example.com",
