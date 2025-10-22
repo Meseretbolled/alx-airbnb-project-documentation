@@ -185,10 +185,10 @@ All sensitive data (passwords, tokens) are encrypted using bcrypt and JWT.
 
 ### Summary
 
-This document ensures the Airbnb Clone backend supports:
+--This document ensures the Airbnb Clone backend supports:
 
-Secure user registration and authentication.
+--Secure user registration and authentication.
 
-Scalable property listing management.
+--Scalable property listing management.
 
-Reliable and validated booking functionality.
+--Reliable and validated booking functionality.
