@@ -39,6 +39,7 @@ Output (Success)
   },
   "token": "jwt_token_here"
 }
+```
 ### Validation Rules
 
 Email must be unique and valid.
@@ -76,7 +77,7 @@ Guests can view and search properties based on location, price, and availability
 Input Example
 
 ### /api/properties (Add Property)
-
+```json
 {
   "title": "Modern Apartment in Addis Ababa",
   "description": "2-bedroom apartment with Wi-Fi and parking.",
@@ -96,6 +97,7 @@ Input Example
     "host_id": "u123"
   }
 }
+```
 
 ### Validation Rules
 
@@ -131,7 +133,7 @@ The booking system handles all booking-related operations, including availabilit
  ## Input Example
 
 /api/bookings (Create Booking)
-
+```json
 {
   "property_id": "p101",
   "user_id": "u555",
@@ -152,7 +154,7 @@ The booking system handles all booking-related operations, including availabilit
     "total_price": 340
   }
 }
-
+```
 ### Validation Rules
 
 Dates must be valid and not overlap with existing bookings.
@@ -169,7 +171,7 @@ Prevent duplicate or overlapping bookings.
 
 Implement asynchronous confirmation notifications via email.
 
-### vGeneral Notes
+### General Notes
 
 All APIs return appropriate HTTP status codes:
 
